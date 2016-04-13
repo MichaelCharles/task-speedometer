@@ -1,48 +1,124 @@
-<body class="mdl-color--grey-200">
+<!doctype html>
+<!-- Tekkamikey Boilerplate developed
+	 and designed by MichaelCharl.es/Aubrey -->
 
-  <div class="flexbox">
+<html>
 
-    <div class="information mdl-card mdl-shadow--2dp">
-      <div class="content">
-        <p>
-          Current Time: <span class="current-time"></span>
-        </p>
-        <p>
-          Estimated Completion Time: <span class="estimated-completion-time"></span>
-        </p>
-        <p>
-          Average Task Length: <span class="average-task-length"></span>
-        </p>
-        <p>
-          Time Spent Working: <span class="time-spent-working"></span>
-        </p>
-        <p>
-          Time Spent Resting: <span class="time-not-working"></span>
-        </p>
-      </div>
-    </div>
+<head>
+    <!-- Page Title -->
+    <title>Tekkamikey HTML5 Boilerplate</title>
 
-    <div class="control mdl-card mdl-shadow--2dp">
-      <div class="content">
-        <button class="start mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Start</button>
-        <button class="finish mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Finish Task</button>
-        <button class="break mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Rest</button>
-        <button class="resume mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Resume</button>
-        <button class="reset mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Reset</button>
-<!-- Numeric Textfield -->
-<form action="#">
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input tasks-count" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="count">
-    <label class="mdl-textfield__label" for="count">Number of tasks left...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
-</form>
-        <p class="tip mdl-color-text--grey-500">To begin, enter the number of tasks you have to do today above.</p>
-      
-      </div>
-    </div>
-  </div>
-    <div class="dev-div">
-      <p>Dev Info: <span class="dev"></span> <br> Created by <a href="http://MichaelCharl.es/Aubrey">MichaelCharl.es/Aubrey</a></p>
-  </div>
+    <meta charset="UTF-8">
+
+    <!-- Viewport for a responsive mobile first site. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="https://mca62511.github.io/tekkamikey/favicon.png">
+
+    <!-- Google -->
+    <meta name="description" content="Tekkamikey is an HTML5 boilerplate that uses Google's Material Design Lite and easily implements modern Japanese fonts.">
+    <meta name="keywords" content="tekkamikey,japanese,html5,boilerplate,jQuery,mdl,material design lite,ja">
+    <meta name="application-name" content="Tekkamikey">
+
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Tekkamikey">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://mca62511.github.io/tekkamikey/img/share.png">
+    <meta property="og:description" content="Tekkamikey is an HTML5 boilerplate that uses Google's Material Design Lite and easily implements modern Japanese fonts.">
+
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Tekkamikey HTML5 Boilerplate">
+    <meta name="twitter:description" content="Tekkamikey is an HTML5 boilerplate that uses Google's Material Design Lite and easily implements modern Japanese fonts.">
+    <meta name="twitter:image" content="https://mca62511.github.io/tekkamikey/img/share.png">
+
+    <!-- Normalize.css for cross browser consistency -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
+
+    <!-- CSS libraries and frameworks -->
+
+    <!-- Material Design Lite -->
+    <link href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+    <!-- Fonts -->
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Page conents -->
+
+
+    <body class="mdl-color--grey-200">
+
+        <div class="flexbox">
+
+            <div class="information mdl-card mdl-shadow--2dp">
+                <div class="content">
+                    <p>
+                        Current Time: <span class="current-time"></span>
+                    </p>
+                    <p>
+                        Estimated Completion Time: <span class="estimated-completion-time"></span>
+                    </p>
+                    <p>
+                        Average Task Length: <span class="average-task-length"></span>
+                    </p>
+                    <p>
+                        Time Spent Working: <span class="time-spent-working"></span>
+                    </p>
+                    <p>
+                        Time Spent Resting: <span class="time-not-working"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="control mdl-card mdl-shadow--2dp">
+                <div class="content">
+                    <button class="start mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Start</button>
+                    <button class="finish mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Finish Task</button>
+                    <button class="break mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Rest</button>
+                    <button class="resume mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Resume</button>
+                    <button class="reset mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Reset</button>
+                    <!-- Numeric Textfield -->
+                    <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <input class="mdl-textfield__input tasks-count" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="count">
+                            <label class="mdl-textfield__label" for="count">Number of tasks left...</label>
+                            <span class="mdl-textfield__error">Input is not a number!</span>
+                        </div>
+                    </form>
+                    <p class="tip mdl-color-text--grey-500">To begin, enter the number of tasks you have to do today above.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="dev-div">
+            <p>Dev Info: <span class="dev"></span> <br> Created by <a href="http://MichaelCharl.es/Aubrey">MichaelCharl.es/Aubrey</a></p>
+        </div>
+    </body>
+
+    <!-- Load third party JavaScript frameworks or libraries. -->
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+
 </body>
+
+</html>
