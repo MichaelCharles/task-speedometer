@@ -1,0 +1,48 @@
+<body class="mdl-color--grey-200">
+
+  <div class="flexbox">
+
+    <div class="information mdl-card mdl-shadow--2dp">
+      <div class="content">
+        <p>
+          Current Time: <span class="current-time"></span>
+        </p>
+        <p>
+          Estimated Completion Time: <span class="estimated-completion-time"></span>
+        </p>
+        <p>
+          Average Task Length: <span class="average-task-length"></span>
+        </p>
+        <p>
+          Time Spent Working: <span class="time-spent-working"></span>
+        </p>
+        <p>
+          Time Spent Resting: <span class="time-not-working"></span>
+        </p>
+      </div>
+    </div>
+
+    <div class="control mdl-card mdl-shadow--2dp">
+      <div class="content">
+        <button class="start mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Start</button>
+        <button class="finish mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Finish Task</button>
+        <button class="break mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Rest</button>
+        <button class="resume mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Resume</button>
+        <button class="reset mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" disabled>Reset</button>
+<!-- Numeric Textfield -->
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input tasks-count" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="count">
+    <label class="mdl-textfield__label" for="count">Number of tasks left...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</form>
+        <p class="tip mdl-color-text--grey-500">To begin, enter the number of tasks you have to do today above.</p>
+      
+      </div>
+    </div>
+  </div>
+    <div class="dev-div">
+      <p>Dev Info: <span class="dev"></span> <br> Created by <a href="http://MichaelCharl.es/Aubrey">MichaelCharl.es/Aubrey</a></p>
+  </div>
+</body>
