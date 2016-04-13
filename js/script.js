@@ -1,3 +1,5 @@
+/* global $ */
+
 var clock = {
   isStopped: true,
   isResting: false,
@@ -31,7 +33,7 @@ var clock = {
     clock.taskLengths.push(clock.taskEndTime - clock.taskStartTime - clock.taskBreakLength);
 
     // Calculate Estimates
-    lengthSums = clock.taskLengths.reduce(function(a, b) {
+    var lengthSums = clock.taskLengths.reduce(function(a, b) {
       return a + b
     });
     clock.averageTaskLength = lengthSums / clock.taskLengths.length;
@@ -80,7 +82,7 @@ function updateInterface() {
   $(".average-task-length").html(msToTime(clock.averageTaskLength));
   $(".time-spent-working").html(msToTime(clock.timeSpentWorking));
   $(".time-not-working").html(msToTime(clock.timeNotWorking));
-  if (!$(".tasks-count").is(':focus')) {
+  if (!$(".tasks-count").is(':focus') && $(".tasks-count").val() > 0) {
     $(".tasks-count").val(clock.tasksLeft);
   }
 }
