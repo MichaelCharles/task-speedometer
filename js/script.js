@@ -9,6 +9,17 @@ var clock = {
     } else if (!clock.isStopped && clock.isResting) {
       clock.timeNotWorking = clock.timeNotWorking + 500;
     }
+    
+    
+        // Calculate Estimates
+    var lengthSums = clock.taskLengths.reduce(function(a, b) {
+      return a + b
+    });
+    clock.averageTaskLength = lengthSums / clock.taskLengths.length;
+    clock.estimatedTimeRemaining = clock.averageTaskLength * clock.tasksLeft;
+    var currentTime = new Date().getTime();
+    clock.estimatedCompletionTime = clock.estimatedTimeRemaining + currentTime;
+
   }, 500),
   taskStartTime: 0,
   taskEndTime: 0,
@@ -32,14 +43,6 @@ var clock = {
     clock.taskEndTime = new Date().getTime();
     clock.taskLengths.push(clock.taskEndTime - clock.taskStartTime - clock.taskBreakLength);
 
-    // Calculate Estimates
-    var lengthSums = clock.taskLengths.reduce(function(a, b) {
-      return a + b
-    });
-    clock.averageTaskLength = lengthSums / clock.taskLengths.length;
-    clock.estimatedTimeRemaining = clock.averageTaskLength * clock.tasksLeft;
-    var currentTime = new Date().getTime();
-    clock.estimatedCompletionTime = clock.estimatedTimeRemaining + currentTime;
 
     // Update variables for next task
     clock.taskBreakLength = 0;
