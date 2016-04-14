@@ -120,11 +120,15 @@ $(document).ready(function() {
   $(".tasks-count").on("input", function() {
     if (parseInt($(".tasks-count").val()) > 0) {
       $("button").prop("disabled", false);
-      $("p.tip").fadeOut("slow");
+      $("p.tip").animate({"opacity": "0"}, 400, function(){
+        $("p.tip").slideToggle(400);
+      });
       clock.tasksLeft = $(".tasks-count").val();
     } else {
       $("button").prop("disabled", true);
-      $("p.tip").fadeIn("slow");
+      $("p.tip").slideToggle(400, function(){
+        $("p.tip").animate({"opacity": "1"}, 400);
+      });
     }
   });
 
@@ -159,6 +163,14 @@ $(document).ready(function() {
   });
   $(".reset").click(function() {
     clock.reset();
+  });
+  
+  $("#task-form").submit(function(e){
+    // on form submit, prevent default and start
+    // the app by clicking start.
+    e.preventDefault();
+    $(".start").click();
+    $(".finish").focus();
   });
 
   function parseTaskLengths(arr) {

@@ -1,8 +1,10 @@
 .control,
 .information {
-  max-width: 400px;
+  max-width: 500px;
+  min-height: 100px;
   margin: 16px;
-  min-height: 250px;
+  -webkit-transition: min-height 2s, -webkit-transform 2s; /* Safari */
+  transition: min-height 2s, transform 2s;
 }
 
 .flexbox {
